@@ -7,25 +7,33 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#ffffff",
-    borderWidth: 0.5,
+    //borderWidth: 0.5,
     borderColor: "#fff",
     height: 40,
     width: 220,
     borderRadius: 5,
-    margin: 5
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
   imageIconStyle: {
     padding: 10,
     marginLeft: 15,
     height: 25,
     width: 25,
-    resizeMode: "stretch"
+    resizeMode: "stretch",
   },
   textStyle: {
     color: "#575757",
     marginLeft: 15,
-    marginRight: 20
-  }
+    marginRight: 20,
+  },
 });
 
 export class GoogleSocialButton extends React.Component {
