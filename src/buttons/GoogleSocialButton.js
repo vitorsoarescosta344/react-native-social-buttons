@@ -30,9 +30,9 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   textStyle: {
-    color: "#fff",
+    color: "rgba(0,0,0,0.5)",
     fontWeight: "600",
-    marginLeft: 20,
+    marginLeft: 15,
     marginRight: 20,
   },
 });
