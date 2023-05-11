@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { Text, TouchableOpacity, StyleSheet, Image, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   googleStyle: {
@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     //borderWidth: 0.5,
     borderColor: "#fff",
-    height: 40,
-    width: 220,
-    borderRadius: 5,
+    height: 45,
+    width: Dimensions.get('window').width * 0.8,
+    borderRadius: 20,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
+    marginVertical: 20
   },
   imageIconStyle: {
     padding: 10,
@@ -30,10 +30,11 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   textStyle: {
-    color: "rgba(0,0,0,0.5)",
-    fontWeight: "600",
-    marginLeft: 15,
+    color: "#000",
+    fontWeight: "400",
+    marginLeft: 20,
     marginRight: 20,
+    fontSize: 18
   },
 });
 
@@ -51,7 +52,7 @@ export class GoogleSocialButton extends React.Component {
         <Text style={{ ...styles.textStyle, ...this.props.textStyle }}>
           {this.props.buttonText
             ? this.props.buttonText
-            : "Sign in with Google"}
+            : "Continue with Google"}
         </Text>
       </TouchableOpacity>
     );
