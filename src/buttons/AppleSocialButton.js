@@ -1,16 +1,26 @@
 import React from "react";
-import { Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { Text, TouchableOpacity, StyleSheet, Image, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
   appleStyle: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#000",
-    height: 40,
-    width: 220,
-    borderRadius: 5,
-    margin: 5,
+    backgroundColor: "#ffffff",
+    //borderWidth: 0.5,
+    borderColor: "#fff",
+    height: 45,
+    width: Dimensions.get('window').width * 0.8,
+    borderRadius: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    marginVertical: 20
   },
   imageIconStyle: {
     padding: 10,
@@ -20,10 +30,11 @@ const styles = StyleSheet.create({
     resizeMode: "stretch",
   },
   textStyle: {
-    color: "#fff",
-    fontWeight: "600",
+    color: "#000",
+    fontWeight: "400",
     marginLeft: 20,
     marginRight: 20,
+    fontSize: 18
   },
 });
 
@@ -39,7 +50,7 @@ export class AppleSocialButton extends React.Component {
           style={{ ...styles.imageIconStyle, ...this.props.logoStyle }}
         />
         <Text style={{ ...styles.textStyle, ...this.props.textStyle }}>
-          {this.props.buttonText ? this.props.buttonText : "Sign in with Apple"}
+          {this.props.buttonText ? this.props.buttonText : "Continue with Apple"}
         </Text>
       </TouchableOpacity>
     );
